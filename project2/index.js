@@ -26,7 +26,7 @@ app.get("/",async(req,res)=>{
         // console.log(cont.data.docs[0].cover_i);
         n.push(cont.data.docs[0].cover_i);
         }
-        console.log(n);
+        // console.log(n);
         res.render("index.ejs", {content: n});
         
     } catch (error) {

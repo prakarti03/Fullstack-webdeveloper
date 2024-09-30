@@ -13,6 +13,7 @@ h2{
     margin-top:30px ;
     margin-bottom:30px ;
 }
+
 p{
     font-size: 40px;
     text-align:justify;
@@ -31,7 +32,7 @@ p{
 h3{
     font-size: 30px;
     margin-bottom: 30px;
-    display: inline;
+    
 }
 #para{
     font-size: 30px;
