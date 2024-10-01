@@ -34,6 +34,22 @@ app.get("/",async(req,res)=>{
     }
     
 });
+app.get("/it'snotsummerwithoutyou",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "it's not summer without you");
+        res.render("summer2.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
+app.get("/it'snotsummerwithoutyou",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "the summer i turned pretty");
+        res.render("summer1.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
 app.listen(port,()=>{
     console.log(`Server running on ${port}`);
 });
