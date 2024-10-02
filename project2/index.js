@@ -42,10 +42,34 @@ app.get("/it'snotsummerwithoutyou",async(req,res)=>{
         console.log(error);
     }
 });
-app.get("/it'snotsummerwithoutyou",async(req,res)=>{
+app.get("/thesummeriturnedpretty",async(req,res)=>{
     try{
         const cont = await axios.get(api + "the summer i turned pretty");
         res.render("summer1.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
+app.get("/we'llalwayshavesummer",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "we'll always have summer");
+        res.render("summer3.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
+app.get("/halfgirlfriend",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "half girlfriend");
+        res.render("half.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
+app.get("/2states",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "2 States:The Story Of My Marriage");
+        res.render("2states.ejs",{content:cont.data.docs[0].cover_i}); 
     }catch(error){
         console.log(error);
     }
