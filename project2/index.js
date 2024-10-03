@@ -74,6 +74,38 @@ app.get("/2states",async(req,res)=>{
         console.log(error);
     }
 });
+app.get("/fivepointsomeone",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "Five Point Someone: What not to do at iit");
+        res.render("IIT.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
+app.get("/callingsehmat",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "CALLING SEHMAT ");
+        res.render("calling.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
+app.get("/mafiaqueenofmumbai",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "MAFIA QUEENS OF MUMBAI: STORIES OF WOMEN FROM THE GANGLANDS");
+        res.render("mafia.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
+app.get("/thedevotionofsuspectx",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "THE DEVOTION OF SUSPECT X");
+        res.render("devotion.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
+});
 app.listen(port,()=>{
     console.log(`Server running on ${port}`);
 });
