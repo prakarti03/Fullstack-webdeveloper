@@ -50,7 +50,6 @@ async function imagefetch() {
         return [];
     }
 }
-
 app.get("/posts",async(req,res)=>{
     try{
         const n = await imagefetch();
@@ -62,6 +61,14 @@ app.get("/posts",async(req,res)=>{
     }catch(error){
         console.log(error);
     }   
+});
+app.get("/thesummeriturnedpretty",async(req,res)=>{
+    try{
+        const cont = await axios.get(api + "the summer i turned pretty");
+        res.render("summer1.ejs",{content:cont.data.docs[0].cover_i}); 
+    }catch(error){
+        console.log(error);
+    }
 });
 app.listen(port, async() => {
     await connectDb();

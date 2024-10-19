@@ -15,7 +15,7 @@
     <% posts.forEach((post,index) => { %>
         <div class="first">
             <div class="summer"><img class="summer" src ="<%= imageurl[index] %>" alt="its not summer without you"></div>
-            <h3><a href="/thesummeriturnedpretty"><%= post.name %> - BY <%= post.author %></a></h3>
+            <h3><a class="a" href="/<%= post.name.toLowerCase().replace(/\s+/g, '') %>"><%= post.name %> - BY <%= post.author %></a></h3>
             <p id="para"><%= post.description %></p>
             <button style="float: left;" type="button" class="btn">Edit</button>
             <button type="button" class="btn">Delete</button>
